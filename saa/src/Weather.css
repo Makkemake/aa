@@ -1,0 +1,16 @@
+.Weather {
+  display: flex;
+  flex-direction: column;
+}
+
+.Weather_forecast {
+  display: flex;
+}
+
+.Weather_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}

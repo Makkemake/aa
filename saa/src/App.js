@@ -13,4 +13,4 @@ function App() {
   )
 }
 
-export default Weather;
+export default App;

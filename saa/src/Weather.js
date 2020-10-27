@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import './Weather.css'
 
 class Weather extends Component {
   render() {
@@ -10,10 +11,10 @@ class Weather extends Component {
           <div className="Weather_temp">14°</div>
           <img src ='http://openweathermap.org/img/wn/09d.png' alt="Logo" />
         </div>
-      
-      
-      
-      
+
+
+
+
 
         <div className="Weather_forecast">
 
