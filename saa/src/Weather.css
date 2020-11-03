@@ -5,6 +5,16 @@
 
 .Weather_forecast {
   display: flex;
+  justify-content: center;
+}
+
+.Weather_focused {
+  font-size: 30px;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
 }
 
 .Weather_box {
