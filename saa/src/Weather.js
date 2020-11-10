@@ -1,5 +1,15 @@
 import React, {Component} from 'react'
+import {getForecast} from './requests'
 import './Weather.css'
+
+class Weather extends Component {
+  ComponentDidMount() {
+    getForecast().then(forecasts => )
+  }
+}
+
+
+
 
 class Weather extends Component {
   render() {
