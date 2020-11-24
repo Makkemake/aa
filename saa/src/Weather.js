@@ -16,12 +16,31 @@ class Weather extends Component {
     })
   }
 
+  formatDay = timestamp => {
+  const datetime = new Date(timestamp*1000)
+  const day = datetime.getDate()
+  const month = datetime.getMonth()+1
+  return day + '.' + month
+}
+
+formatTime = timestamp => {
+  const datetime = new Date(timestamp*1000)
+  const hours = datetime.getHours()
+  let minutes = datetime.getMinutes()
+  if (minutes < 10) {
+    minutes = '0' + minutes
+  }
+  return hours + ':' + minutes
+}
+
+
   renderWeatherItem(forecast) {
     return (
       <div className="Weather_box">
-        <div className="Weather_day">ma</div>
-        <div className="Weather_time">15:00</div>
-        <div className="Weather_temp">16°</div>
+        <div className="Weather_day">{this.formatDay(focusedWeather.dt)}</div>
+        <div className="Weather_time">{this.formatTime(focusedWeather.dt)}</div>
+        <div className="Weather_temp">{Math.round(focusedWeather.main.temp)}°</div>
+        <img src={'http://openweathermap.org/img/wn/'+focusedWeather.weather[0].icon+'.png'} alt="Logo" />
         <img src={'http://openweathermap.org/img/wn/'+forecast.weather[0].icon+'09d.png'} alt="Logo" />
       </div>
     )
@@ -50,7 +69,7 @@ class Weather extends Component {
           { forecasts.list.map.(forecast => this.renderWeatherItem(forecast)}
         </div>
 
-    
+
 
 
 
