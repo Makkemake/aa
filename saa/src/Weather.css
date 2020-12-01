@@ -25,3 +25,16 @@
   flex-wrap: wrap;
 
 }
+
+
+Weather_box .Weather_temp {
+  font_size: 30px;
+}
+
+.Weather_box img {
+  width: 40px;
+}
+
+.Weather_desc {
+  text-transform: capitalize;
+}
